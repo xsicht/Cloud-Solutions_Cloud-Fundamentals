@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.7.13)  19 MAR 2017 17:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.7.13)  19 MAR 2017 22:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1737,7 +1737,7 @@ ABD: EveryShipout initializing macros
 \c@lstlisting=\count182
 Package scrhack Info: undefining \float@addtolists on input line 4.
  (./default/titlepage.tex
-<images/hsr_logo.pdf, id=67, 184.69pt x 72.27pt>
+<images/hsr_logo.pdf, id=63, 184.69pt x 72.27pt>
 File: images/hsr_logo.pdf Graphic file (type pdf)
  <use images/hsr_logo.pdf>
 Package pdftex.def Info: images/hsr_logo.pdf used on input line 6.
@@ -1843,7 +1843,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--13
 \T1/LinuxBiolinumT-TLF/m/n/10.95 für die ver-schie-de-nen PaaS
  []
 
-<images/image1.png, id=100, 1056.94875pt x 622.325pt>
+<images/image1.png, id=95, 1056.94875pt x 622.325pt>
 File: images/image1.png Graphic file (type png)
  <use images/image1.png>
 Package pdftex.def Info: images/image1.png used on input line 13.
@@ -1853,13 +1853,13 @@ Underfull \hbox (badness 1009) in paragraph at lines 14--15
 \T1/LinuxBiolinumT-TLF/m/n/10.95 Cloud Foun-dry Com-mand Li-
  []
 
-<images/image2.png, id=101, 632.3625pt x 326.21875pt>
+<images/image2.png, id=96, 632.3625pt x 326.21875pt>
 File: images/image2.png Graphic file (type png)
  <use images/image2.png>
 Package pdftex.def Info: images/image2.png used on input line 15.
 (pdftex.def)             Requested size: 305.15294pt x 157.41946pt.
 
-<images/image3.png, id=102, 642.4pt x 670.505pt>
+<images/image3.png, id=97, 642.4pt x 670.505pt>
 File: images/image3.png Graphic file (type png)
  <use images/image3.png>
 Package pdftex.def Info: images/image3.png used on input line 16.
@@ -1874,7 +1874,7 @@ Underfull \hbox (badness 1210) in paragraph at lines 17--18
 \T1/LinuxBiolinumT-TLF/m/n/10.95 com App Cloud ver-traut ma-
  []
 
-<images/image4.png, id=103, 328.22626pt x 313.17pt>
+<images/image4.png, id=98, 328.22626pt x 313.17pt>
 File: images/image4.png Graphic file (type png)
  <use images/image4.png>
 Package pdftex.def Info: images/image4.png used on input line 18.
@@ -1884,13 +1884,13 @@ File: images/image1.png Graphic file (type png)
 <use images/image1.png>
 Package pdftex.def Info: images/image1.png used on input line 19.
 (pdftex.def)             Requested size: 305.15294pt x 179.67197pt.
- <images/image5.png, id=104, 298.11375pt x 137.51375pt>
+ <images/image5.png, id=99, 298.11375pt x 137.51375pt>
 File: images/image5.png Graphic file (type png)
 
 <use images/image5.png>
 Package pdftex.def Info: images/image5.png used on input line 21.
 (pdftex.def)             Requested size: 305.15294pt x 140.76785pt.
- <images/image6.png, id=105, 643.40375pt x 258.9675pt>
+ <images/image6.png, id=100, 643.40375pt x 258.9675pt>
 File: images/image6.png Graphic file (type png)
 
 <use images/image6.png>
@@ -1906,45 +1906,45 @@ Overfull \hbox (22.64287pt too wide) in paragraph at lines 24--24
 \T1/LinuxBiolinumT-TLF/m/n/10.95 ps://console.developer.swisscom.com
  []
 
-<images/image7.png, id=106, 597.23125pt x 290.08376pt>
+<images/image7.png, id=101, 597.23125pt x 290.08376pt>
 File: images/image7.png Graphic file (type png)
  <use images/image7.png>
 Package pdftex.def Info: images/image7.png used on input line 24.
 (pdftex.def)             Requested size: 305.15294pt x 148.2196pt.
 
-<images/image8.png, id=107, 598.235pt x 330.23375pt>
+<images/image8.png, id=102, 598.235pt x 330.23375pt>
 File: images/image8.png Graphic file (type png)
  <use images/image8.png>
 Package pdftex.def Info: images/image8.png used on input line 26.
 (pdftex.def)             Requested size: 305.15294pt x 168.45224pt.
 
-<images/image9.png, id=108, 644.4075pt x 99.37125pt>
+<images/image9.png, id=103, 644.4075pt x 99.37125pt>
 File: images/image9.png Graphic file (type png)
  <use images/image9.png>
 Package pdftex.def Info: images/image9.png used on input line 27.
 (pdftex.def)             Requested size: 305.15294pt x 47.05779pt.
 
-<images/image10.png, id=109, 546.04pt x 89.33376pt>
+<images/image10.png, id=104, 546.04pt x 89.33376pt>
 File: images/image10.png Graphic file (type png)
  <use images/image10.png>
 Package pdftex.def Info: images/image10.png used on input line 29.
 (pdftex.def)             Requested size: 305.15294pt x 49.92432pt.
 
-<images/image11.png, id=110, 623.32875pt x 197.73875pt>
+<images/image11.png, id=105, 623.32875pt x 197.73875pt>
 File: images/image11.png Graphic file (type png)
 
 <use images/image11.png>
 Package pdftex.def Info: images/image11.png used on input line 30.
 (pdftex.def)             Requested size: 305.15294pt x 96.80533pt.
 
-<images/image12.png, id=111, 643.40375pt x 234.8775pt>
+<images/image12.png, id=106, 643.40375pt x 234.8775pt>
 File: images/image12.png Graphic file (type png)
 
 <use images/image12.png>
 Package pdftex.def Info: images/image12.png used on input line 31.
 (pdftex.def)             Requested size: 305.15294pt x 111.39952pt.
 
-<images/image13.png, id=112, 643.40375pt x 411.5375pt>
+<images/image13.png, id=107, 643.40375pt x 411.5375pt>
 File: images/image13.png Graphic file (type png)
 
 <use images/image13.png>
@@ -1955,7 +1955,7 @@ Underfull \hbox (badness 3068) in paragraph at lines 33--33
 []|\T1/LinuxBiolinumT-TLF/m/n/10.95 Mittels ^^Rcf app my-java-app^^P
  []
 
-<images/image14.png, id=113, 643.40375pt x 236.885pt>
+<images/image14.png, id=108, 643.40375pt x 236.885pt>
 File: images/image14.png Graphic file (type png)
  <use images/image14.png>
 Package pdftex.def Info: images/image14.png used on input line 33.
@@ -1965,13 +1965,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 34--35
 \T1/LinuxBiolinumT-TLF/m/n/10.95 die ver-wen-de-ten Res-sour-cen
  []
 
-<images/image15.png, id=114, 643.40375pt x 115.43124pt>
+<images/image15.png, id=109, 643.40375pt x 115.43124pt>
 File: images/image15.png Graphic file (type png)
 
 <use images/image15.png>
 Package pdftex.def Info: images/image15.png used on input line 35.
 (pdftex.def)             Requested size: 305.15294pt x 54.74762pt.
- <images/image16.png, id=115, 644.4075pt x 59.22125pt>
+ <images/image16.png, id=110, 644.4075pt x 59.22125pt>
 File: images/image16.png Graphic file (type png)
 
 <use images/image16.png>
@@ -1987,14 +1987,14 @@ Underfull \hbox (badness 2735) in paragraph at lines 38--38
 \T1/LinuxBiolinumT-TLF/m/n/10.95 mit-tels ^^Rcf sca-le my-java-app
  []
 
-<images/image17.png, id=116, 643.40375pt x 599.23875pt>
+<images/image17.png, id=111, 643.40375pt x 599.23875pt>
 File: images/image17.png Graphic file (type png)
 
 <use images/image17.png>
 Package pdftex.def Info: images/image17.png used on input line 38.
 (pdftex.def)             Requested size: 305.15294pt x 284.21161pt.
 
-<images/image18.png, id=117, 1337.99875pt x 445.665pt>
+<images/image18.png, id=112, 1337.99875pt x 445.665pt>
 File: images/image18.png Graphic file (type png)
 
 <use images/image18.png>
@@ -2005,7 +2005,7 @@ Underfull \hbox (badness 6808) in paragraph at lines 40--40
 []|\T1/LinuxBiolinumT-TLF/m/n/10.95 Die Log-fi-les kön-nen ein-fach
  []
 
-<images/image19.png, id=118, 643.40375pt x 53.19875pt>
+<images/image19.png, id=113, 643.40375pt x 53.19875pt>
 File: images/image19.png Graphic file (type png)
 
 <use images/image19.png>
@@ -2025,7 +2025,7 @@ Underfull \hbox (badness 1584) in paragraph at lines 41--42
 []|\T1/LinuxBiolinumT-TLF/m/n/10.95 Mittels ^^Rcf stop my-java-app^^P
  []
 
-<images/image20.png, id=119, 644.4075pt x 464.73625pt>
+<images/image20.png, id=114, 644.4075pt x 464.73625pt>
 File: images/image20.png Graphic file (type png)
 
 <use images/image20.png>
@@ -2051,18 +2051,18 @@ chapter 2.
 
 ]
 chapter 3.
-<images/power-of-platform.png, id=154, 1232.605pt x 459.7175pt>
+<images/power-of-platform.png, id=149, 1232.605pt x 459.7175pt>
 File: images/power-of-platform.png Graphic file (type png)
 
 <use images/power-of-platform.png>
-Package pdftex.def Info: images/power-of-platform.png used on input line 52.
+Package pdftex.def Info: images/power-of-platform.png used on input line 49.
 (pdftex.def)             Requested size: 308.1505pt x 114.9291pt.
 
-<images/execution-environment.png, id=155, 33.2442pt x 36.01456pt>
+<images/execution-environment.png, id=150, 33.2442pt x 36.01456pt>
 File: images/execution-environment.png Graphic file (type png)
 
 <use images/execution-environment.png>
-Package pdftex.def Info: images/execution-environment.png used on input line 61
+Package pdftex.def Info: images/execution-environment.png used on input line 58
 .
 (pdftex.def)             Requested size: 99.73233pt x 108.04335pt.
  [11
@@ -2070,42 +2070,42 @@ Package pdftex.def Info: images/execution-environment.png used on input line 61
  <./images/power-of-platform.png (PNG copy)> <./images/execution-environment.pn
 g (PNG copy)>]
 LaTeX Font Info:    Try loading font information for TS1+LinuxBiolinumT-TLF on 
-input line 68.
+input line 65.
 
 (c:/texlive/2015/texmf-dist/tex/latex/libertine/ts1linuxbiolinumt-tlf.fd
 File: TS1LinuxBiolinumT-TLF.fd 2012/11/26 (autoinst) Font definitions for TS1/L
 inuxBiolinumT-TLF.
 )
 LaTeX Font Info:    Font shape `TS1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 10.95pt on input line 68.
+(Font)              scaled to size 10.95pt on input line 65.
 
-<images/static-workload.png, id=160, 683.55376pt x 88.07906pt>
+<images/static-workload.png, id=155, 683.55376pt x 88.07906pt>
 File: images/static-workload.png Graphic file (type png)
 
 <use images/static-workload.png>
-Package pdftex.def Info: images/static-workload.png used on input line 75.
+Package pdftex.def Info: images/static-workload.png used on input line 72.
 (pdftex.def)             Requested size: 410.13542pt x 52.84782pt.
 
-<images/once-lifetime.png, id=162, 680.5425pt x 91.84312pt>
+<images/once-lifetime.png, id=157, 680.5425pt x 91.84312pt>
 File: images/once-lifetime.png Graphic file (type png)
 
 <use images/once-lifetime.png>
-Package pdftex.def Info: images/once-lifetime.png used on input line 77.
+Package pdftex.def Info: images/once-lifetime.png used on input line 74.
 (pdftex.def)             Requested size: 408.32864pt x 55.10628pt.
 
-<images/applications.png, id=163, 435.87843pt x 385.44pt>
+<images/applications.png, id=158, 435.87843pt x 385.44pt>
 File: images/applications.png Graphic file (type png)
 
 <use images/applications.png>
-Package pdftex.def Info: images/applications.png used on input line 90.
+Package pdftex.def Info: images/applications.png used on input line 87.
 (pdftex.def)             Requested size: 305.11282pt x 269.80615pt.
  [12 <./images/static-workload.png> <./images/once-lifetime.png> <./images/appl
 ications.png>]
-<images/visualisierung.png, id=172, 450.18187pt x 326.72063pt>
+<images/visualisierung.png, id=167, 450.18187pt x 326.72063pt>
 File: images/visualisierung.png Graphic file (type png)
 
 <use images/visualisierung.png>
-Package pdftex.def Info: images/visualisierung.png used on input line 101.
+Package pdftex.def Info: images/visualisierung.png used on input line 98.
 (pdftex.def)             Requested size: 315.12515pt x 228.70287pt.
  [13 <./images/visualisierung.png>]
 chapter 4.
@@ -2113,9 +2113,15 @@ chapter 4.
 
 ]
 chapter 5.
-[15
+<images/price-per-month.png, id=178, 374.90062pt x 194.97844pt>
+File: images/price-per-month.png Graphic file (type png)
 
-]
+<use images/price-per-month.png>
+Package pdftex.def Info: images/price-per-month.png used on input line 114.
+(pdftex.def)             Requested size: 299.9209pt x 155.98294pt.
+ [15
+
+ <./images/price-per-month.png>]
 chapter 6.
 [16
 
@@ -2137,25 +2143,28 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 17.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 17.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 17.
 Package rerunfilecheck Info: File `documentation.out' has not changed.
-(rerunfilecheck)             Checksum: B13E3F318C9F159AFEE60DF1E7DD5001;876.
+(rerunfilecheck)             Checksum: 3328F20EBD453D20577DA812C8AA8116;794.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 17.
  ) 
 Here is how much of TeX's memory you used:
- 26170 strings out of 493093
- 465723 string characters out of 6138556
+ 26180 strings out of 493093
+ 465908 string characters out of 6138556
  607247 words of memory out of 5000000
- 29035 multiletter control sequences out of 15000+600000
- 76656 words of font info for 64 fonts, out of 8000000 for 9000
+ 29038 multiletter control sequences out of 15000+600000
+ 78459 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,12n,66p,515b,482s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/texlive/2015/texmf-dist/fonts/enc/dvips/libertine/lbtn_afusau.enc}{c:/tex
-live/2015/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc}<c:/texlive/2015
-/texmf-dist/fonts/type1/public/libertine/LinBiolinumT.pfb><c:/texlive/2015/texm
-f-dist/fonts/type1/public/libertine/LinBiolinumTB.pfb>
-Output written on documentation.pdf (18 pages, 835993 bytes).
+{c:/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}{c:/texlive/2015/texm
+f-dist/fonts/enc/dvips/libertine/lbtn_afusau.enc}{c:/texlive/2015/texmf-dist/fo
+nts/enc/dvips/libertine/lbtn_25tcsq.enc}<c:/texlive/2015/texmf-dist/fonts/type1
+/public/libertine/LinBiolinumT.pfb><c:/texlive/2015/texmf-dist/fonts/type1/publ
+ic/libertine/LinBiolinumTB.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/f
+ourier/fourier-ms.pfb><c:/texlive/2015/texmf-dist/fonts/type1/adobe/utopia/putr
+8a.pfb><c:/texlive/2015/texmf-dist/fonts/type1/adobe/utopia/putri8a.pfb>
+Output written on documentation.pdf (18 pages, 876320 bytes).
 PDF statistics:
- 220 PDF objects out of 1000 (max. 8388607)
- 165 compressed objects within 2 object streams
- 36 named destinations out of 1000 (max. 500000)
- 268 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 230 PDF objects out of 1000 (max. 8388607)
+ 170 compressed objects within 2 object streams
+ 35 named destinations out of 1000 (max. 500000)
+ 265 words of extra memory for PDF output out of 10000 (max. 10000000)
 

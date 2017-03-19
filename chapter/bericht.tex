@@ -42,9 +42,6 @@ Mittels „cf stop my-java-app“ kann die App gestoppt werden. Falls sie wieder
 &\includegraphics[width=0.65\columnwidth, valign=T]{images/image20.png} \\ \hline
 \end{longtable}
 
-\section{Vergleich mit der Google App Engine}
-Datenhaltung in der Schweiz, usw. blablabla
-
 \chapter{OSSM-Definition}
 \chapter{Cloud Computing Patterns}
 Die Swisscom Application Cloud setzt das Service-Modell \glqq Platform as a Service\grqq (PaaS) um. Im Bild sind die drei vorgängigen Servicemodelle im Vergleich mit PaaS ersichtlich.
@@ -104,6 +101,31 @@ Die Hello World Java App kann gemäss dem Pattern \glqq Elastic Platform\grqq pl
 
 \chapter{Self-Information}
 \chapter{Preisrecherche}
+Swisscom verfolgt eine usage-based Pricing Strategie. Man bezahl also nur für laufende Dienst Die Kosten setzen sich zusammen aus den Ressourcen für die App + zusätzliche Services. Seit Ende 2016 wird bei der Swisscom stündlich abgerechnet. Davor wurde in täglichen Intervallen abgerechnet. Die Preise sind einfachheitshalber aber meist in CHF pro Monat angegeben. 
+
+Für die Datenbankprodukte (MariaDB, MongoDB) hat Swisscom die Instanzen in drei verschiedenen Grössen kreiert (S, M, L). Man kann pro Grösse bis zu 10 Instanzen verwenden. 
+
+Bei RabbitMQ bezahlt man Messages pro Monat. Für 1 Mio. Messages bezahlt man CHF 13.20.-. 
+
+Für Diskspace bezahlt man einen Basispreis von CHF 9.00.-, damit hat man 100GB zur Verfügung. Für jede weiteren 100GB muss man zusätzliche CHF 6.00.- bezahlen.
+
+Das Pricing für die Apps ist sehr einfach gehalten. Man hat nur 2 Faktoren, welche den Preis beeinflussen, nämlich Instanzen und Memory. Man bezahl pro 64MB CHF 1.50.- pro Monat. Die Instanzen dienen als Faktor. Wählen wir beispielsweise für unsere Applikation 512MB mit 2 Instanzen, so kostet uns das \((512MB/64MB)*1.50CHF*2=24CHF\) monatlich.
+
+\includegraphics[scale=0.8]{images/price-per-month.png}
+
+Vor der Erstellung einer App muss dem Account eine Kreditkarte hinterlegt werden. Eine Bezahlung auf Rechnung ist in der Public Application Cloud nicht möglich.
+
+Für neue User steht eine \glqq Welcome Offer\grqq zur Verfügung. Für die erste 3 Monate werden kosten bis CHF 100.00.- pro Monat erlassen. So kann man als Interessent ausgiebig testen. 
+
+Die Preispolitik ist bei der Swisscom Application Cloud viel einfacher als bei AWS EC2. Die geforderte Konfiguration lässt sich weder mit Swisscom, noch mit AWS so einfach berechnen. Wir gehen nun von einer anderen Konfiguration aus:
+\begin{itemize}
+\item 2 Instanzen
+\item 512MB RAM pro Instanz
+\item 20GB Diskspace
+\end{itemize}
+
+Bei Swisscom kostet eine solche Konfiguration CHF 33.00.- monatlich. Bei AWS EC2 USD 11.44. Selbst wenn man die Währungsvorteile vom amerikanischen Dollar aussen vor lässt, ist Amazon doch sehr deutlich günstiger. Der Vergleich ist aber sehr gewagt, da bei Swisscom nicht ersichtlich ist, welche Computing Leistung man erhält. Bei AWS EC2 erhält man für diesen Preis eine sehr schwache CPU Leistung.
+
 \chapter{Preisvergleich Hosting vs IaaS vs PaaS}
 \chapter{Twelve-Factor Apps}
 
