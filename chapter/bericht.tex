@@ -47,6 +47,61 @@ Datenhaltung in der Schweiz, usw. blablabla
 
 \chapter{OSSM-Definition}
 \chapter{Cloud Computing Patterns}
+Die Swisscom Application Cloud setzt das Service-Modell \glqq Platform as a Service\grqq (PaaS) um. Im Bild sind die drei vorgängigen Servicemodelle im Vergleich mit PaaS ersichtlich.
+ 
+\includegraphics[scale=0.25]{images/power-of-platform.png}
+
+Swisscom verwendet Cloud Foundry für ihre Application Cloud Plattform. Cloud Foundry wird ebenfalls von vielen anderen Providern und Firmen (z.B. IBM, Pivotal, SAP, usw.) verwendet sowie weiterentwickelt. Somit ist Cloud Foundry ein Open Source Projekt. Diese Konstellation verhindert Vendor-lock-ins, d.b. es sollte sehr einfach sein die Provider für die eigenen Enterprise Applikationen auszutauschen. Dies generiert für die Kunden einen echten Mehrwert.
+ 
+\section{Process Offering}
+Als Entwickler möchte man eine fix-fertige Umgebung aus einem Guss. Die Swisscom Application Cloud bietet deshalb fertige Umgebungen für Programmierer. 
+
+Diese Anforderungen können mit dem Pattern \glqq Execution Environment\grqq umgesetzt werden.
+
+\includegraphics[scale=3]{images/execution-environment.png}
+
+Für den Kunden ist vordergründig nicht viel sichtbar. Er kann seine Sources in die Cloud laden und von der Execution Environment ausführen lassen. Die App wird dann in einem Container ausgeführt und die darunterliegende Infrastruktur ist für den Kunden unbekannt. 
+
+\section{Workload}
+Bei der Swisscom Application Cloud wird kein Auto-Scaling unterstützt. Dies verhindert den Einsatz bei gewissen Workload Patterns. Man kann problemlos die Applikation skalieren, jedoch muss dies manuell geschehen. Eine häufige Änderung des Workloads ist daher ungeeignet. Deshalb fallen folgende Workload Patterns wohl nicht in das Aufgabengebiet der Swisscom Application Cloud:
+\begin{itemize}
+\item Periodic Workload
+\item Unpredictable Workload
+\item Continuously Changing Workload
+\end{itemize}
+
+Hingegen sind die Workload Patterns \glqq Static Workload\grqq und \glqq Once-in-a-Lifetime\grqq Workload gut geeignet.
+
+\includegraphics[scale=0.6]{images/static-workload.png}
+
+\includegraphics[scale=0.6]{images/once-lifetime.png}
+
+Bei einer statischen Workload muss offensichtlich nicht skaliert werden. Bei Events, welche einmalig auftreten ist es ebenfalls kein Problem, dies manuell zu skalieren.
+
+\section{Komponenten}
+Das Angebot in der Swisscom Application Cloud kann in zwei Gruppen unterteilt werden:
+\begin{itemize}
+\item Applications
+\item Services
+\end{itemize}
+
+Bei den Applications kann man als User seine Applikationen bereitstellen. Folgende Technologien stehen zur Verfügung:
+
+\includegraphics[scale=0.7]{images/applications.png}
+
+Als Services stehen bekannte Produkte unterschiedlicher Hersteller bereit. Diese wären beispielsweise MongoDB als Vertreter der NoSQL Familie. MariaDB fungiert als SQL Datenbank und Redis als Key-Value Store. Für Queueing und Messaging steht RabbitMQ zur Verfügung. 
+
+Swisscom Application Cloud stellt das CCP \glqq Execution Environment\grqq dem Kunden zur Verfügung. Hypervisor als Process Offering ist an dieser Stelle fehl am Platz da man auf einer höheren Abstraktionsstufe arbeitet. Die Hardware resp. Virtualisierungsplattform ist hier nicht ersichtlich, resp. Black-Box. 
+
+Möchte man Map-Reduce Computing, so muss man sich selber darum kümmern, resp. es wird von Swisscom nichts out-of-the-box angeboten.
+
+\section{Übersichtsgrafik}
+Die Hello World Java App kann gemäss dem Pattern \glqq Elastic Platform\grqq platziert werden.
+
+\includegraphics[scale=0.7]{images/visualisierung}
+
+
+
 \chapter{Self-Information}
 \chapter{Preisrecherche}
 \chapter{Preisvergleich Hosting vs IaaS vs PaaS}
