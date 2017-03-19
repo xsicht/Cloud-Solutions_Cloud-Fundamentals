@@ -43,6 +43,30 @@ Mittels „cf stop my-java-app“ kann die App gestoppt werden. Falls sie wieder
 \end{longtable}
 
 \chapter{OSSM-Definition}
+\section{On-Demand}
+Es gibt mehere unterstütze Services und Programmiersprachen, die bereits Verfügbar sind. Nach der Anmeldung und der Angabe der Kreditkarte können solche Instanzen erstellt werden und sind ohne Wartezeiten einsatzbereit. Dies merkt der User durch die vorbereiteten Templates, welche er schnell erstellen und starten kann.
+\section{Self-Service}
+Es gibt viele verschiedene Templates, welche bereits Verfügbar sind. Diese können leicht mit der Weboberfläche erstellt werden. Der Entwickler pushed danach seine lokale Applikation via CLI auf diesen Webspace und die Applikation ist einsatzbereit.
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.65]{images/image01.png} 
+\includegraphics[scale=0.3]{images/image08.png} 
+\end{figure}
+
+\section{Scalable}
+Jede Applikation kann man weitere Instanzen hinzufügen. Auch der maximale Arbeitsspeicher und der Festplattenspeicher kann eingestellt werden, doch es werden nur 2 GB Arbeitsspeicher unterstüzt. Der Festplattenspeicher aber nur über das CLI. Die Skalierung muss von Hand erledigt werden, da es keine Möglichkeit zur automatischen Skalierung gibt.
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{images/image09.png} 
+\end{figure}
+
+\section{Measureable}
+Bei der Cloudlösung der Swisscom sieht man die Kosten bereits beim Erstellen des Services. Dabei werden die Kosten aus der Anzahl Instanzen und der Arbeitsspeicherlimite berechnet. Gezahlt wird die monatliche Rechnung per Kreditkarte.
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{images/image07.png} 
+\includegraphics[scale=0.5]{images/image05.png} 
+\end{figure}
 \chapter{Cloud Computing Patterns}
 Die Swisscom Application Cloud setzt das Service-Modell \glqq Platform as a Service\grqq (PaaS) um. Im Bild sind die drei vorgängigen Servicemodelle im Vergleich mit PaaS ersichtlich.
  
@@ -100,6 +124,47 @@ Die Hello World Java App kann gemäss dem Pattern \glqq Elastic Platform\grqq pl
 
 
 \chapter{Self-Information}
+Bei der Installation gab es wenige Probleme. Hier sind die wichtigsten Schritte kurz aufgezeigt.
+\begin{longtable}{| p{5cm} | p{11cm} |}
+\hline
+In IntelliJ importiert man sich das Projekt und lädt das Cloud Foundry Plugin herunter. Nun loggt man sich ein und erstellt eine Verbindung zu seiner Swisscom-Cloud. Die Organization und der Space werden nach dem Login sofort gefunden.
+&\includegraphics[width=0.65\columnwidth, valign=T]{images/cloudfoundryplugin.png}\\ \hline
+
+Nun wird die Applikation gebuildet und auf die Swisscom-Cloud geladen. Wie man sieht, wird sofort eine Instanz erstellt und die Applikation ist erreichbar.
+&\includegraphics[width=0.65\columnwidth, valign=T]{images/instanzen.png}\\ \hline
+
+
+Hier sieht man nun, dass die Applikation bereits erreichbar ist.
+&\includegraphics[width=0.65\columnwidth, valign=T]{images/laufendepp.png}\\ \hline
+\end{longtable}
+\section{Fragen}
+\subsection{Wieviel RAM steht Ihrer Cloud-Instanz maximal zur Verfügung?}
+Der Cloud-Instanz steht bei der Swisscom maximal 2 GB zur Verfügung. Mehr kann man leider nicht zuweisen.
+Die App zeigt aber dies hier an:
+\begin{itemize}
+\item		Maximum memory (megabytes): 1276
+\item		Total memory (megabytes): 1276
+\item		Total space (megabytes): 1007
+\item		Free space (megabytes): 854
+\item		Usable space (megabytes): 787
+\end{itemize}
+Wie es aussieht, kann die Applikation nicht die ganzen 2 GB nutzen. Vielleicht wird dies aber auch dynamisch angepasst.
+\subsection{Von welchem Hersteller stammt die JVM?}
+\begin{itemize}
+\item		java.runtime.name: OpenJDK Runtime Environment
+\item		java.vm.version: 25.111-b14
+\item		java.vm.vendor: Oracle Corporation
+\item		java.vm.name: OpenJDK 64-Bit Server VM
+\end{itemize}
+Die VM stammt von Oracle. Es wird das OpenJDK auf einem Linuxserver verwendet.
+\subsection{Welche IP-Adresse hat der Server laut der Self Information-Applikation?}
+\begin{itemize}
+\item		Name 0: w9a98pllh480-1
+\item		InetAddresses 0: /10.254.0.138
+\item		Name 1: lo
+\item		InetAddresses 1: /127.0.0.1
+\end{itemize}
+Es sind zwei Interface verbunden. Das Loopback und eines mit dem Namen: w9a98pllh480-1. Die IP-Adresse ist 10.254.0.138. 
 \chapter{Preisrecherche}
 Swisscom verfolgt eine usage-based Pricing Strategie. Man bezahl also nur für laufende Dienst Die Kosten setzen sich zusammen aus den Ressourcen für die App + zusätzliche Services. Seit Ende 2016 wird bei der Swisscom stündlich abgerechnet. Davor wurde in täglichen Intervallen abgerechnet. Die Preise sind einfachheitshalber aber meist in CHF pro Monat angegeben. 
 
@@ -128,4 +193,39 @@ Bei Swisscom kostet eine solche Konfiguration CHF 33.00.- monatlich. Bei AWS EC2
 
 \chapter{Preisvergleich Hosting vs IaaS vs PaaS}
 \chapter{Twelve-Factor Apps}
+Als Beispielapplikation haben wir Das Miniprojekt aus WED2 vom Jahr 2016 genommen. Dies ist eine kleine Notizenapp in Node.JS geschrieben.
+\section{Welche Anpassungen müssten Sie an Ihrer Applikation vornehmen?}
+\subsubsection{Codebase}
+Bei der Entwicklung der Notizenapp haben wir immer mit GitHub gearbeitet, da wir mehrere Entwickler waren. Da es eine kleine App war, haben wir aber immer nur ein Deploy geführt. Die Auftrennung in verschiedene Deploys war zu diesem Zeitpunkt noch nicht nötig, aber wäre schnell umsetzbar. Daher muss bei diesem Punkt nichts angepasst werden. 
+\subsubsection{Dependencies}
+Da die App in Node geschrieben wurde, konnten wir bei den Dependencies auf npm zurückgreifen. In unserer package.json Datei gab es ein dependencies Bereich mit allen Abhängigkeiten.
+\subsubsection{Config}
+Eine eigene Konfigurationsdatei gab es bei uns nicht. Dies müsste man für den 12-Faktoren Check eingebaut werden. Die Datenbankanbindung könnte sicher in diese Konfigurationsdatei, sowie auch die Servereinstellungen, wie der Port usw.
+\subsubsection{Backing services}
+Bei der Beispielapplikation wurde ein Backing services verwendet. Die Datenbank wurde zu Redis ausgelagert, damit man keinen lokalen Speicher verwenden musste. 
+\subsubsection{Build, release, run}
+Wir haben keine Aufteilung in Build und Releases gemacht, da dies bei Node nicht üblich ist. Um dies einzurichten, könnte man Heroku Buildpack für Node.js einrichten, damit man verschiedene Build hat. Weiter kann man via npm Parameter angeben, welcher Stand der Release hat. Zum Beispiel so: ''npm install --production''. Dies wurde aber nicht gemacht.
+\subsubsection{Processes}
+Da wir nur ein Miniprojekt entwickelt haben, haben wir diesen Punkt nicht eingerichtet. Aber Dies ist bei Node kein Problem. Unter Linux kann man einfach eine Systemd Service Konfigurationsdatei erstellen. Dieser wird in den Autostart verlinkt und so startet die Applikation immer in einem eigenen Service. Da die Daten in einer Datenbank gespeichert wurden, war die Applikation auch Stateless und konnte mehrmals gestartet werden.
+\subsubsection{Port binding}
+Port Binding ist bei Node immer der Fall, da es sich bei Node um einen Webserver handelt. Bei unserem Beispiel konnten wir den Port 3000 einstellen. Das Port Binding könnte auch noch per Konfigurationsdatei für die Verschiedenen Bereiche (Development oder Running System) separat angegeben werden.
+\subsubsection{Concurrency}
+Durch das asynchrone System von Node und ohne grössere Backgroud Tasks, ist Concurrency ziemlich einfach. Einzig der Datenbankzugriff müsste wohl noch Concurrent gmacht werden, damit es bei der Datenbank nicht zu Race Conditions kommt.
+\subsubsection{Disposability}
+Unsere Applikation unterstützt diesen Punkt. Node startet extrem schnell und die HTTP Requests sind auch kurz. Daher ist dieser Punkt bei so kleinen Node Projekten einfach erreichbar.
+\subsubsection{Dev/Prod parity}
+Da wir hier keine Trennung hatten, da es sich nur um ein Miniprojekt handelte, ist uns dies gelungen. Bei einer Weiterentwicklung würde man dafür auf verschiedenen Branches auf GitHub arbeiten.
+\subsubsection{Logs}
+In unserem Projekt wurde im Endprodukt kein Log eingebaut. Dies müsste noch eingebaut werden, damit man den 12-Faktor Standard erreicht. Im npm-Repo gibt es gute Logging Lösungen, welche dies einfach implementierbar machen.
+\subsubsection{Admin processes}
+Admin Tasks werden bei Node, wie auch bei unserem Projekt in das /bin Verzeichnis verschoben. Danach wird mit eigenen Scripts gearbeitet, welche die Tasks im Laufenden Betrieb erledigen. Durch das schnelle starten von Node, sollte das kein Problem sein.
+
+
+
+
+
+
+
+
+
 
