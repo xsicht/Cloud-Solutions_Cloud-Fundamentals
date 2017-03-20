@@ -2,7 +2,7 @@
 \section{Providerwahl}
 Wir haben uns für Swisscom als Provider entschieden, da es uns wichtig war, einen lokalen, heimischen Anbieter bezüglich Cloud Computing besser kennenzulernen. Swisscom ist in vielen Bereichen der IT und Telekommunikation schweizweit marktführend. 
 
-In einem Gastvortrag an der HSR im Herbst 2016 ist ein Vertreter der Swisscom erschienen und hat von der Vorzügen und der gelebten Swissness erzählt. Da wir noch nie mit PaaS Produkten im Allgemeinen gearbeitet haben war dies die perfekte Möglichkeit um in die Thematik reinzufinden. 
+In einem Gastvortrag an der HSR im Herbst 2016 ist ein Vertreter der Swisscom erschienen und hat von der Vorzügen und der gelebten Swissness erzählt. Da wir noch nie mit PaaS Produkten im Allgemeinen gearbeitet haben, war dies die perfekte Möglichkeit um einen ersten Einblick in diese Thematik zu erhalten.
 \section{Anleitung}
 Der Einstieg fiel allgemein gesehen leicht. Swisscom verwendet \glqq Cloud Foundry\grqq für ihre Application Cloud. Mittels Tutorials auf der Webseite wird man für den Einstieg gut \glqq an der Hand genommen\grqq .
 
@@ -142,7 +142,7 @@ Nun wird die Applikation gebuildet und auf die Swisscom-Cloud geladen. Wie man s
 Hier sieht man nun, dass die Applikation bereits erreichbar ist.
 &\includegraphics[width=0.65\columnwidth, valign=T]{images/laufendepp.png}\\ \hline
 \end{longtable}
-\subsubsection{Wieviel RAM steht Ihrer Cloud-Instanz maximal zur Verfügung?}
+\subsubsection{Wie viel RAM steht Ihrer Cloud-Instanz maximal zur Verfügung?}
 Der Cloud-Instanz steht bei der Swisscom maximal 2 GB zur Verfügung. Mehr kann man leider nicht zuweisen.
 Die App zeigt aber dies hier an:
 \begin{itemize}
@@ -204,8 +204,8 @@ Bei der Preiskalkulation kamen wir auf folgendes Ergebnis:
 \end{figure}
 \subsubsection{Welche Variante ist die kostengünstigste?}
 Bei unserer Kalkulation ist die Variante von Amazon die günstigste Variante. Diese ist mit 6010 Euro für zwei Jahre knapp günstiger als die Swisscom Variante. Mit eigenen Servern ist man deutlich über diesem Preis.
-\subsubsection{Auf welche Schwierigkeiten stosst man beim Vergleichen?}
-Es ist schwierig die Angebote miteinander zu vergleichen, da nicht jeder Anbieter das gleiche Berechnen. Bei der Swisscom musste das Datenvolumen zum Beispiel nicht bezahlt werden. Oder VMware berechnet den Speicher eher teuer. So kann man den Verglu nehmen.
+\subsubsection{Auf welche Schwierigkeiten stösst man beim Vergleichen?}
+Es ist schwierig die Angebote miteinander zu vergleichen, da nicht jeder Anbieter das gleiche berechnen. Bei der Swisscom musste das Datenvolumen zum Beispiel nicht bezahlt werden. Oder VMware berechnet den Speicher eher teuer.
 Es ist auch sehr schwer abzuschätzen, was für eine Leistung man bekommt. Meistens stehen nur die CPU Kerne und nichts genaueres. So ist es schwer die Leistung zu vergleichen.
 \subsubsection{Wie schätzen Sie die Preise für Cloud Computing insgesamt ein?}
 Die Preise sind sehr günstig. Man zahlt nur genau das was man benötigt. Dies ist bei eigenen Servern nicht so, da in diesem Fall die Server ja nicht die gesamte Zeit so ausgelastet sind, damit es sich lohnt.
@@ -222,13 +222,13 @@ Bei der Entwicklung der Notizenapp haben wir immer mit GitHub gearbeitet, da wir
 \subsubsection{Dependencies}
 Da die App in Node geschrieben wurde, konnten wir bei den Dependencies auf npm zurückgreifen. In unserer package.json Datei gab es ein Dependencies Bereich mit allen Abhängigkeiten.
 \subsubsection{Config}
-Eine eigene Konfigurationsdatei gab es bei uns nicht. Dies müsste man für den 12-Faktoren Check eingebaut werden. Die Datenbankanbindung könnte sicher in diese Konfigurationsdatei, sowie auch die Servereinstellungen, wie der Port usw.
+Eine eigene Konfigurationsdatei gab es bei uns nicht. Dies müsste man für den 12-Faktoren Check eingebaut werden. Die Datenbankanbindung könnte sicher in diese Konfigurationsdatei, sowie auch die Servereinstellungen wie der Port usw.
 \subsubsection{Backing services}
 Bei der Beispielapplikation wurde ein Backing services verwendet. Die Datenbank wurde zu Redis ausgelagert, damit man keinen lokalen Speicher verwenden musste. 
 \subsubsection{Build, release, run}
-Wir haben keine Aufteilung in Build und Releases gemacht, da dies bei Node nicht üblich ist. Um dies einzurichten, könnte man Heroku Buildpack für Node.js einrichten, damit man verschiedene Build hat. Weiter kann man via npm Parameter angeben, welcher Stand der Release hat. Zum Beispiel so: ''npm install --production''. Dies wurde aber nicht gemacht.
+Wir haben keine Aufteilung in Build und Releases gemacht, da dies bei Node nicht üblich ist. Um dies einzurichten, könnte man Heroku Buildpack für Node.js einrichten, damit man verschiedene Builds hat. Weiter kann man via npm Parameter angeben. Zum Beispiel so: ''npm install --production''. Dies wurde aber nicht gemacht.
 \subsubsection{Processes}
-Da wir nur ein Miniprojekt entwickelt haben, haben wir diesen Punkt nicht eingerichtet. Aber Dies ist bei Node kein Problem. Unter Linux kann man einfach eine Systemd Service Konfigurationsdatei erstellen. Dieser wird in den Autostart verlinkt und so startet die Applikation immer in einem eigenen Service. Da die Daten in einer Datenbank gespeichert wurden, war die Applikation auch Stateless und konnte mehrmals gestartet werden.
+Da wir nur ein Miniprojekt entwickelten, haben wir diesen Punkt nicht eingerichtet. Aber dies ist bei Node kein Problem. Unter Linux kann man einfach eine Systemd Service Konfigurationsdatei erstellen. Dieser wird in den Autostart verlinkt und so startet die Applikation immer in einem eigenen Service. Da die Daten in einer Datenbank gespeichert wurden, war die Applikation auch Stateless und konnte mehrmals gestartet werden.
 \subsubsection{Port binding}
 Port Binding ist bei Node immer der Fall, da es sich bei Node um einen Webserver handelt. Bei unserem Beispiel konnten wir den Port 3000 einstellen. Das Port Binding könnte auch noch per Konfigurationsdatei für die Verschiedenen Bereiche (Development oder Running System) separat angegeben werden.
 \subsubsection{Concurrency}
