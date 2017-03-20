@@ -1,6 +1,6 @@
 \chapter{Hello World}
 \section{Providerwahl}
-Wir haben uns für Swisscom als Provider entschieden, da es uns wichtig war, einen lokalen, heimischen Anbieter gezüglich Cloud Computing besser kennenzulernen. Swisscom ist in vielen Bereichen der IT und Telekommunikation schweizweit marktführend. 
+Wir haben uns für Swisscom als Provider entschieden, da es uns wichtig war, einen lokalen, heimischen Anbieter bezüglich Cloud Computing besser kennenzulernen. Swisscom ist in vielen Bereichen der IT und Telekommunikation schweizweit marktführend. 
 
 In einem Gastvortrag an der HSR im Herbst 2016 ist ein Vertreter der Swisscom erschienen und hat von der Vorzügen und der gelebten Swissness erzählt. Da wir noch nie mit PaaS Produkten im Allgemeinen gearbeitet haben war dies die perfekte Möglichkeit um in die Thematik reinzufinden. 
 \section{Anleitung}
@@ -8,7 +8,7 @@ Der Einstieg fiel allgemein gesehen leicht. Swisscom verwendet \glqq Cloud Found
 
 \begin{longtable}{| p{5cm} | p{11cm} |}
 \hline
-Unter https://docs.developer.swisscom.com/getting-started/ 
+Unter https://docs.developer.swisscom. com/getting-started/ 
 findet man Tutorials für die verschiedenen PaaS Produkte wie z.B. Python, Java, Node.js
 &\includegraphics[width=0.65\columnwidth, valign=T]{images/image1.png}\\ \hline
 Als allererstes benötigt man das Cloud Foundry Command Line Interface. Auf der Webseite sind Beschreibungen für die Installation unter Linux/Macintosh/Windows zu finden. (Windows in dieser Anleitung) 
@@ -41,12 +41,11 @@ Die Logfiles können einfach mittels „cf logs my-java-app --recent“ abgerufe
 Mittels „cf stop my-java-app“ kann die App gestoppt werden. Falls sie wieder benötigt wird kann sie mittels „cf start my-java-app“ wieder hochgefahren werden. 
 &\includegraphics[width=0.65\columnwidth, valign=T]{images/image20.png} \\ \hline
 \end{longtable}
-
 \chapter{OSSM-Definition}
 \section{On-Demand}
 Es gibt mehere unterstütze Services und Programmiersprachen, die bereits Verfügbar sind. Nach der Anmeldung und der Angabe der Kreditkarte können solche Instanzen erstellt werden und sind ohne Wartezeiten einsatzbereit. Dies merkt der User durch die vorbereiteten Templates, welche er schnell erstellen und starten kann.
 \section{Self-Service}
-Es gibt viele verschiedene Templates, welche bereits Verfügbar sind. Diese können leicht mit der Weboberfläche erstellt werden. Der Entwickler pushed danach seine lokale Applikation via CLI auf diesen Webspace und die Applikation ist einsatzbereit.
+Es gibt bereits viele verschiedene Applikation-Templates für viele Programmiersprachen. So kann der Benutzer einfach eine neue Applikation erstellen und auf die Website pushen. Die lokal erstellte Applikation wird entweder via CLI oder über die Weboberfläche in die Cloud geladen.
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.65]{images/image01.png} 
@@ -54,14 +53,15 @@ Es gibt viele verschiedene Templates, welche bereits Verfügbar sind. Diese kön
 \end{figure}
 
 \section{Scalable}
-Jede Applikation kann man weitere Instanzen hinzufügen. Auch der maximale Arbeitsspeicher und der Festplattenspeicher kann eingestellt werden, doch es werden nur 2 GB Arbeitsspeicher unterstüzt. Der Festplattenspeicher aber nur über das CLI. Die Skalierung muss von Hand erledigt werden, da es keine Möglichkeit zur automatischen Skalierung gibt.
+Bei der Swisscom kann man mit Scale Up, wie auch Scale Out skalieren. Dies geschieht entweder mit er Cloud Foundry CLI oder über die Weboberfläche. Bei der Weboberfläche gibt es zum Teil noch Begrenzungen, da die Oberfläche noch nicht komplett an das CLI angepasst ist. (Zum Teil lässt sich maximal nur 2 GB Arbeitsspeicher einstellen). Der Festplattenspeicher kann nur über das CLI eingestellt werden. Die Skalierung muss von Hand erledigt werden, da es keine Möglichkeit zur automatischen Skalierung gibt.
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.5]{images/image09.png} 
 \end{figure}
 
 \section{Measureable}
-Bei der Cloudlösung der Swisscom sieht man die Kosten bereits beim Erstellen des Services. Dabei werden die Kosten aus der Anzahl Instanzen und der Arbeitsspeicherlimite berechnet. Gezahlt wird die monatliche Rechnung per Kreditkarte.
+Bei der Cloudlösung der Swisscom sieht man die Kosten bereits beim Erstellen des Services. Dabei werden die Kosten aus der Anzahl Instanzen und der Arbeitsspeicherlimite berechnet. Es gibt eine Formel, welche genau zeigt wie teuer eine Applikation ist. Diese findet sich weiter unten im Bericht.
+Gezahlt wird die monatliche Rechnung per Kreditkarte. Auf der Rechnung sind alle wichtigen Punkte aufgelistet und es gibt keine versteckte Kosten.
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.5]{images/image07.png} 
@@ -69,18 +69,20 @@ Bei der Cloudlösung der Swisscom sieht man die Kosten bereits beim Erstellen de
 \end{figure}
 \chapter{Cloud Computing Patterns}
 Die Swisscom Application Cloud setzt das Service-Modell \glqq Platform as a Service\grqq (PaaS) um. Im Bild sind die drei vorgängigen Servicemodelle im Vergleich mit PaaS ersichtlich.
- 
+\begin{figure}[H]
+\centering
 \includegraphics[scale=0.25]{images/power-of-platform.png}
-
+\end{figure}
 Swisscom verwendet Cloud Foundry für ihre Application Cloud Plattform. Cloud Foundry wird ebenfalls von vielen anderen Providern und Firmen (z.B. IBM, Pivotal, SAP, usw.) verwendet sowie weiterentwickelt. Somit ist Cloud Foundry ein Open Source Projekt. Diese Konstellation verhindert Vendor-lock-ins, d.b. es sollte sehr einfach sein die Provider für die eigenen Enterprise Applikationen auszutauschen. Dies generiert für die Kunden einen echten Mehrwert.
  
 \section{Process Offering}
 Als Entwickler möchte man eine fix-fertige Umgebung aus einem Guss. Die Swisscom Application Cloud bietet deshalb fertige Umgebungen für Programmierer. 
 
 Diese Anforderungen können mit dem Pattern \glqq Execution Environment\grqq umgesetzt werden.
-
+\begin{figure}[H]
+\centering
 \includegraphics[scale=3]{images/execution-environment.png}
-
+\end{figure}
 Für den Kunden ist vordergründig nicht viel sichtbar. Er kann seine Sources in die Cloud laden und von der Execution Environment ausführen lassen. Die App wird dann in einem Container ausgeführt und die darunterliegende Infrastruktur ist für den Kunden unbekannt. 
 
 \section{Workload}
@@ -92,11 +94,12 @@ Bei der Swisscom Application Cloud wird kein Auto-Scaling unterstützt. Dies ver
 \end{itemize}
 
 Hingegen sind die Workload Patterns \glqq Static Workload\grqq und \glqq Once-in-a-Lifetime\grqq Workload gut geeignet.
-
+\begin{figure}[H]
+\centering
 \includegraphics[scale=0.6]{images/static-workload.png}
 
 \includegraphics[scale=0.6]{images/once-lifetime.png}
-
+\end{figure}
 Bei einer statischen Workload muss offensichtlich nicht skaliert werden. Bei Events, welche einmalig auftreten ist es ebenfalls kein Problem, dies manuell zu skalieren.
 
 \section{Komponenten}
@@ -107,9 +110,10 @@ Das Angebot in der Swisscom Application Cloud kann in zwei Gruppen unterteilt we
 \end{itemize}
 
 Bei den Applications kann man als User seine Applikationen bereitstellen. Folgende Technologien stehen zur Verfügung:
-
+\begin{figure}[H]
+\centering
 \includegraphics[scale=0.7]{images/applications.png}
-
+\end{figure}
 Als Services stehen bekannte Produkte unterschiedlicher Hersteller bereit. Diese wären beispielsweise MongoDB als Vertreter der NoSQL Familie. MariaDB fungiert als SQL Datenbank und Redis als Key-Value Store. Für Queueing und Messaging steht RabbitMQ zur Verfügung. 
 
 Swisscom Application Cloud stellt das CCP \glqq Execution Environment\grqq dem Kunden zur Verfügung. Hypervisor als Process Offering ist an dieser Stelle fehl am Platz da man auf einer höheren Abstraktionsstufe arbeitet. Die Hardware resp. Virtualisierungsplattform ist hier nicht ersichtlich, resp. Black-Box. 
@@ -118,9 +122,10 @@ Möchte man Map-Reduce Computing, so muss man sich selber darum kümmern, resp. 
 
 \section{Übersichtsgrafik}
 Die Hello World Java App kann gemäss dem Pattern \glqq Elastic Platform\grqq platziert werden.
-
+\begin{figure}[H]
+\centering
 \includegraphics[scale=0.7]{images/visualisierung}
-
+\end{figure}
 
 
 \chapter{Self-Information}
@@ -137,8 +142,7 @@ Nun wird die Applikation gebuildet und auf die Swisscom-Cloud geladen. Wie man s
 Hier sieht man nun, dass die Applikation bereits erreichbar ist.
 &\includegraphics[width=0.65\columnwidth, valign=T]{images/laufendepp.png}\\ \hline
 \end{longtable}
-\section{Fragen}
-\subsection{Wieviel RAM steht Ihrer Cloud-Instanz maximal zur Verfügung?}
+\subsubsection{Wieviel RAM steht Ihrer Cloud-Instanz maximal zur Verfügung?}
 Der Cloud-Instanz steht bei der Swisscom maximal 2 GB zur Verfügung. Mehr kann man leider nicht zuweisen.
 Die App zeigt aber dies hier an:
 \begin{itemize}
@@ -149,7 +153,7 @@ Die App zeigt aber dies hier an:
 \item		Usable space (megabytes): 787
 \end{itemize}
 Wie es aussieht, kann die Applikation nicht die ganzen 2 GB nutzen. Vielleicht wird dies aber auch dynamisch angepasst.
-\subsection{Von welchem Hersteller stammt die JVM?}
+\subsubsection{Von welchem Hersteller stammt die JVM?}
 \begin{itemize}
 \item		java.runtime.name: OpenJDK Runtime Environment
 \item		java.vm.version: 25.111-b14
@@ -157,7 +161,7 @@ Wie es aussieht, kann die Applikation nicht die ganzen 2 GB nutzen. Vielleicht w
 \item		java.vm.name: OpenJDK 64-Bit Server VM
 \end{itemize}
 Die VM stammt von Oracle. Es wird das OpenJDK auf einem Linuxserver verwendet.
-\subsection{Welche IP-Adresse hat der Server laut der Self Information-Applikation?}
+\subsubsection{Welche IP-Adresse hat der Server laut der Self Information-Applikation?}
 \begin{itemize}
 \item		Name 0: w9a98pllh480-1
 \item		InetAddresses 0: /10.254.0.138
@@ -175,9 +179,10 @@ Bei RabbitMQ bezahlt man Messages pro Monat. Für 1 Mio. Messages bezahlt man CH
 Für Diskspace bezahlt man einen Basispreis von CHF 9.00.-, damit hat man 100GB zur Verfügung. Für jede weiteren 100GB muss man zusätzliche CHF 6.00.- bezahlen.
 
 Das Pricing für die Apps ist sehr einfach gehalten. Man hat nur 2 Faktoren, welche den Preis beeinflussen, nämlich Instanzen und Memory. Man bezahl pro 64MB CHF 1.50.- pro Monat. Die Instanzen dienen als Faktor. Wählen wir beispielsweise für unsere Applikation 512MB mit 2 Instanzen, so kostet uns das \((512MB/64MB)*1.50CHF*2=24CHF\) monatlich.
-
+\begin{figure}[H]
+\centering
 \includegraphics[scale=0.8]{images/pricepermonth.png}
-
+\end{figure}
 Vor der Erstellung einer App muss dem Account eine Kreditkarte hinterlegt werden. Eine Bezahlung auf Rechnung ist in der Public Application Cloud nicht möglich.
 
 Für neue User steht eine \glqq Welcome Offer\grqq zur Verfügung. Für die erste 3 Monate werden kosten bis CHF 100.00.- pro Monat erlassen. So kann man als Interessent ausgiebig testen. 
@@ -197,26 +202,25 @@ Bei der Preiskalkulation kamen wir auf folgendes Ergebnis:
 \centering
 \includegraphics[scale=0.65]{images/kostenvergleich.png}  
 \end{figure}
-\section{Welche Variante ist die kostengünstigste?}
+\subsubsection{Welche Variante ist die kostengünstigste?}
 Bei unserer Kalkulation ist die Variante von Amazon die günstigste Variante. Diese ist mit 6010 Euro für zwei Jahre knapp günstiger als die Swisscom Variante. Mit eigenen Servern ist man deutlich über diesem Preis.
-\section{Auf welche Schwierigkeiten stosst man beim Vergleichen?}
+\subsubsection{Auf welche Schwierigkeiten stosst man beim Vergleichen?}
 Es ist schwierig die Angebote miteinander zu vergleichen, da nicht jeder Anbieter das gleiche Berechnen. Bei der Swisscom musste das Datenvolumen zum Beispiel nicht bezahlt werden. Oder VMware berechnet den Speicher eher teuer. So kann man den Verglu nehmen.
 Es ist auch sehr schwer abzuschätzen, was für eine Leistung man bekommt. Meistens stehen nur die CPU Kerne und nichts genaueres. So ist es schwer die Leistung zu vergleichen.
-\section{Wie schätzen Sie die Preise für Cloud Computing insgesamt ein?}
-Die Preise sind sehr günstig. Man zahlt nur genau das was man benötigt. Dies ist bei eigenen Servern nicht so, da in diesem Fall die Server ja nicht die gesamte Zeit so ausgelastet sind, damit es sich lohnt. Ein eigener Server wird ab ca. 80\% lohnenswert.eich nicht zu gena
-\section{Sollte man den Cloud-Anbieter nach gebotener Funktionalität und Preis auswählen?}
-%TODO
-\section{Cloud-Provider oder klassisches Hosting?}
+\subsubsection{Wie schätzen Sie die Preise für Cloud Computing insgesamt ein?}
+Die Preise sind sehr günstig. Man zahlt nur genau das was man benötigt. Dies ist bei eigenen Servern nicht so, da in diesem Fall die Server ja nicht die gesamte Zeit so ausgelastet sind, damit es sich lohnt.
+\subsubsection{Sollte man den Cloud-Anbieter rein nach gebotener Funktionalität und Preis auswählen oder gibt es weitere Entscheidungskriterien?}
+Es gibt ganz klar noch weitere Entscheidungskriterien. So sollten zum Beispiel auch die SLAs betrachtet werden. Ist der Dienst nicht stabil oder hat man sonst viele Probleme, ist dies sicher auch ein Grund für einen Wechsel.
+Auch der Support kann entscheidend sein. Bei Problemen muss der Cloud-Anbieter unterstützen und die Probleme beseitigen. Soweit dies natürlich möglich ist.
+\subsubsection{Cloud-Provider oder klassisches Hosting?}
 Bei einer solch kleinen Applikation muss man klar zum Cloudanbieter greifen. Mit einer eigenen Umgebung zahlt man um ein vielfaches mehr. In unserem Fall zahlt man 4x mehr für das klassische Hosting. 
-
-
 \chapter{Twelve-Factor Apps}
-Als Beispielapplikation haben wir Das Miniprojekt aus WED2 vom Jahr 2016 genommen. Dies ist eine kleine Notizenapp in Node.JS geschrieben.
+Als Beispielapplikation haben wir das Miniprojekt aus WED2 vom Jahr 2016 genommen. Dies ist eine kleine Notizenapp in Node.js geschrieben.
 \section{Welche Anpassungen müssten Sie an Ihrer Applikation vornehmen?}
 \subsubsection{Codebase}
 Bei der Entwicklung der Notizenapp haben wir immer mit GitHub gearbeitet, da wir mehrere Entwickler waren. Da es eine kleine App war, haben wir aber immer nur ein Deploy geführt. Die Auftrennung in verschiedene Deploys war zu diesem Zeitpunkt noch nicht nötig, aber wäre schnell umsetzbar. Daher muss bei diesem Punkt nichts angepasst werden. 
 \subsubsection{Dependencies}
-Da die App in Node geschrieben wurde, konnten wir bei den Dependencies auf npm zurückgreifen. In unserer package.json Datei gab es ein dependencies Bereich mit allen Abhängigkeiten.
+Da die App in Node geschrieben wurde, konnten wir bei den Dependencies auf npm zurückgreifen. In unserer package.json Datei gab es ein Dependencies Bereich mit allen Abhängigkeiten.
 \subsubsection{Config}
 Eine eigene Konfigurationsdatei gab es bei uns nicht. Dies müsste man für den 12-Faktoren Check eingebaut werden. Die Datenbankanbindung könnte sicher in diese Konfigurationsdatei, sowie auch die Servereinstellungen, wie der Port usw.
 \subsubsection{Backing services}
@@ -228,7 +232,7 @@ Da wir nur ein Miniprojekt entwickelt haben, haben wir diesen Punkt nicht einger
 \subsubsection{Port binding}
 Port Binding ist bei Node immer der Fall, da es sich bei Node um einen Webserver handelt. Bei unserem Beispiel konnten wir den Port 3000 einstellen. Das Port Binding könnte auch noch per Konfigurationsdatei für die Verschiedenen Bereiche (Development oder Running System) separat angegeben werden.
 \subsubsection{Concurrency}
-Durch das asynchrone System von Node und ohne grössere Backgroud Tasks, ist Concurrency ziemlich einfach. Einzig der Datenbankzugriff müsste wohl noch Concurrent gmacht werden, damit es bei der Datenbank nicht zu Race Conditions kommt.
+Durch das asynchrone System von Node und ohne grössere Background Tasks, ist Concurrency ziemlich einfach. Einzig der Datenbankzugriff müsste wohl noch Concurrent gemacht werden, damit es bei der Datenbank nicht zu Race Conditions kommt.
 \subsubsection{Disposability}
 Unsere Applikation unterstützt diesen Punkt. Node startet extrem schnell und die HTTP Requests sind auch kurz. Daher ist dieser Punkt bei so kleinen Node Projekten einfach erreichbar.
 \subsubsection{Dev/Prod parity}
@@ -237,7 +241,7 @@ Da wir hier keine Trennung hatten, da es sich nur um ein Miniprojekt handelte, i
 In unserem Projekt wurde im Endprodukt kein Log eingebaut. Dies müsste noch eingebaut werden, damit man den 12-Faktor Standard erreicht. Im npm-Repo gibt es gute Logging Lösungen, welche dies einfach implementierbar machen.
 \subsubsection{Admin processes}
 Admin Tasks werden bei Node, wie auch bei unserem Projekt in das /bin Verzeichnis verschoben. Danach wird mit eigenen Scripts gearbeitet, welche die Tasks im Laufenden Betrieb erledigen. Durch das schnelle starten von Node, sollte das kein Problem sein.
-\section{Wie untterscheidet sich diese Methode von IDEALen nach Fehling et al?}
+\subsubsection{Wie unterscheidet sich diese Methode von IDEALen nach Fehling et al?}
 Im Grunde wollen beide Methoden das selbe. 12-Faktor zeigt dies einfach in mehreren kleinen Kapiteln, anstelle von fünf grossen Kapiteln. 
 Was aber im IDEAL fehlt oder weniger genau beschrieben ist, sind folgende Kapitel aus der 12-Faktor Methode:
 \begin{itemize}
@@ -249,7 +253,7 @@ Was aber im IDEAL fehlt oder weniger genau beschrieben ist, sind folgende Kapite
 \item	Logs
 \item	Admin processes
 \end{itemize}
-\section{Welche der beiden Methoden scheint einfacher?}
+\subsubsection{Welche der beiden Methoden scheint einfacher?}
 Die 12-Faktor Methode scheint mir einfacher zu sein. Diese ist viel genauer beschrieben und man weiss bei jedem Punkt genau, was man anpassen muss.
 
 
