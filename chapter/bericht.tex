@@ -15,10 +15,10 @@ Als allererstes benötigt man das Cloud Foundry Command Line Interface. Auf der 
 &\includegraphics[width=0.65\columnwidth, valign=T]{images/image2.png} \\ \hline
 Nach erfolgreicher Installation ist das „cf“-Tool per Windows Commandline (cmd) benutzbar&\includegraphics[width=0.65\columnwidth, valign=T]{images/image3.png} \\ \hline
 Nun können wir uns mit der Web Console von der Swisscom App Cloud vertraut machen. Auch hier gibt es ein Tutorial 
-&\includegraphics[width=0.65\columnwidth, valign=T]{images/image4.png} \\ \hline
+&\includegraphics[width=0.4\columnwidth, valign=T]{images/image4.png} \\ \hline
 Jetzt können wir das Tutorial für eine Java App durcharbeiten &\includegraphics[width=0.65\columnwidth, valign=T]{images/image1.png} \\ \hline
 Als Erstes sollte man die Prereqs überprüfen 
-&\includegraphics[width=0.65\columnwidth, valign=T]{images/image5.png} \\ \hline
+&\includegraphics[width=0.5\columnwidth, valign=T]{images/image5.png} \\ \hline
 Nun muss man sich über die cf Console an der Swisscom App Cloud anmelden. Wir skippen die Zuweisung an eine Org. 
 &\includegraphics[width=0.65\columnwidth, valign=T]{images/image6.png} \\ \hline
 Unter https://console.developer.swisscom.com erstellen wir eine neue Org Namens „HelloWorld“. &\includegraphics[width=0.65\columnwidth, valign=T]{images/image7.png} \\ \hline
@@ -41,6 +41,12 @@ Die Logfiles können einfach mittels „cf logs my-java-app --recent“ abgerufe
 Mittels „cf stop my-java-app“ kann die App gestoppt werden. Falls sie wieder benötigt wird kann sie mittels „cf start my-java-app“ wieder hochgefahren werden. 
 &\includegraphics[width=0.65\columnwidth, valign=T]{images/image20.png} \\ \hline
 \end{longtable}
+\section{Vergleich mit Google App Engine}
+Verglichen mit der Google App Engine wirkt die Swisscom Developer Console schlanker. Man findet sich viel leichter zurecht da das UI besser gestaltet wurde als bei Google. 
+
+Sobald man einmal die Tutorials gefunden hat, bedient sich die App Engine sehr ähnlich der Swisscom Application Cloud. Bei Swisscom muss die Cloud Foundry Shell lokal installiert werden, bei GAE kann man die Online Google Cloud Shell verwenden. 
+
+Das Pricing (siehe später) scheint bei Swisscom einfacher und transparenter als bei GAE. 
 \chapter{OSSM-Definition}
 \section{On-Demand}
 Es gibt mehere unterstütze Services und Programmiersprachen, die bereits Verfügbar sind. Nach der Anmeldung und der Angabe der Kreditkarte können solche Instanzen erstellt werden und sind ohne Wartezeiten einsatzbereit. Dies merkt der User durch die vorbereiteten Templates, welche er schnell erstellen und starten kann.
@@ -112,7 +118,7 @@ Das Angebot in der Swisscom Application Cloud kann in zwei Gruppen unterteilt we
 Bei den Applications kann man als User seine Applikationen bereitstellen. Folgende Technologien stehen zur Verfügung:
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.7]{images/applications.png}
+\includegraphics[scale=0.5]{images/applications.png}
 \end{figure}
 Als Services stehen bekannte Produkte unterschiedlicher Hersteller bereit. Diese wären beispielsweise MongoDB als Vertreter der NoSQL Familie. MariaDB fungiert als SQL Datenbank und Redis als Key-Value Store. Für Queueing und Messaging steht RabbitMQ zur Verfügung. 
 
@@ -170,7 +176,7 @@ Die VM stammt von Oracle. Es wird das OpenJDK auf einem Linuxserver verwendet.
 \end{itemize}
 Es sind zwei Interface verbunden. Das Loopback und eines mit dem Namen: w9a98pllh480-1. Die IP-Adresse ist 10.254.0.138. 
 \chapter{Preisrecherche}
-Swisscom verfolgt eine usage-based Pricing Strategie. Man bezahl also nur für laufende Dienst Die Kosten setzen sich zusammen aus den Ressourcen für die App + zusätzliche Services. Seit Ende 2016 wird bei der Swisscom stündlich abgerechnet. Davor wurde in täglichen Intervallen abgerechnet. Die Preise sind einfachheitshalber aber meist in CHF pro Monat angegeben. 
+Swisscom verfolgt eine Usage-based Pricing Strategie. Man bezahlt also nur für laufende Dienste. Die Kosten setzen sich zusammen aus den Ressourcen für die App + zusätzliche Services. Seit Ende 2016 wird bei der Swisscom stündlich abgerechnet. Davor wurde in täglichen Intervallen abgerechnet. Die Preise sind einfachheitshalber aber meist in CHF pro Monat angegeben. 
 
 Für die Datenbankprodukte (MariaDB, MongoDB) hat Swisscom die Instanzen in drei verschiedenen Grössen kreiert (S, M, L). Man kann pro Grösse bis zu 10 Instanzen verwenden. 
 
@@ -178,14 +184,14 @@ Bei RabbitMQ bezahlt man Messages pro Monat. Für 1 Mio. Messages bezahlt man CH
 
 Für Diskspace bezahlt man einen Basispreis von CHF 9.00.-, damit hat man 100GB zur Verfügung. Für jede weiteren 100GB muss man zusätzliche CHF 6.00.- bezahlen.
 
-Das Pricing für die Apps ist sehr einfach gehalten. Man hat nur 2 Faktoren, welche den Preis beeinflussen, nämlich Instanzen und Memory. Man bezahl pro 64MB CHF 1.50.- pro Monat. Die Instanzen dienen als Faktor. Wählen wir beispielsweise für unsere Applikation 512MB mit 2 Instanzen, so kostet uns das \((512MB/64MB)*1.50CHF*2=24CHF\) monatlich.
+Das Pricing für die Apps ist sehr einfach gehalten. Man hat nur 2 Faktoren, welche den Preis beeinflussen, nämlich Instanzen und Memory. Man bezahlt pro 64MB CHF 1.50.- pro Monat. Die Instanzen dienen als Faktor. Wählen wir beispielsweise für unsere Applikation 512MB mit 2 Instanzen, so kostet uns das \((512MB/64MB)*1.50CHF*2=24CHF\) monatlich.
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.8]{images/pricepermonth.png}
 \end{figure}
 Vor der Erstellung einer App muss dem Account eine Kreditkarte hinterlegt werden. Eine Bezahlung auf Rechnung ist in der Public Application Cloud nicht möglich.
 
-Für neue User steht eine \glqq Welcome Offer\grqq zur Verfügung. Für die erste 3 Monate werden kosten bis CHF 100.00.- pro Monat erlassen. So kann man als Interessent ausgiebig testen. 
+Für neue User steht eine \glqq Welcome Offer\grqq zur Verfügung. Für die erste 3 Monate werden Kosten bis CHF 100.00.- pro Monat erlassen. So kann man als Interessent ausgiebig testen. 
 
 Die Preispolitik ist bei der Swisscom Application Cloud viel einfacher als bei AWS EC2. Die geforderte Konfiguration lässt sich weder mit Swisscom, noch mit AWS so einfach berechnen. Wir gehen nun von einer anderen Konfiguration aus:
 \begin{itemize}
