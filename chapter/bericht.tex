@@ -176,7 +176,7 @@ Für Diskspace bezahlt man einen Basispreis von CHF 9.00.-, damit hat man 100GB 
 
 Das Pricing für die Apps ist sehr einfach gehalten. Man hat nur 2 Faktoren, welche den Preis beeinflussen, nämlich Instanzen und Memory. Man bezahl pro 64MB CHF 1.50.- pro Monat. Die Instanzen dienen als Faktor. Wählen wir beispielsweise für unsere Applikation 512MB mit 2 Instanzen, so kostet uns das \((512MB/64MB)*1.50CHF*2=24CHF\) monatlich.
 
-\includegraphics[scale=0.8]{images/price-per-month.png}
+\includegraphics[scale=0.8]{images/pricepermonth.png}
 
 Vor der Erstellung einer App muss dem Account eine Kreditkarte hinterlegt werden. Eine Bezahlung auf Rechnung ist in der Public Application Cloud nicht möglich.
 
@@ -219,7 +219,20 @@ Da wir hier keine Trennung hatten, da es sich nur um ein Miniprojekt handelte, i
 In unserem Projekt wurde im Endprodukt kein Log eingebaut. Dies müsste noch eingebaut werden, damit man den 12-Faktor Standard erreicht. Im npm-Repo gibt es gute Logging Lösungen, welche dies einfach implementierbar machen.
 \subsubsection{Admin processes}
 Admin Tasks werden bei Node, wie auch bei unserem Projekt in das /bin Verzeichnis verschoben. Danach wird mit eigenen Scripts gearbeitet, welche die Tasks im Laufenden Betrieb erledigen. Durch das schnelle starten von Node, sollte das kein Problem sein.
-
+\section{Wie untterscheidet sich diese Methode von IDEALen nach Fehling et al?}
+Im Grunde wollen beide Methoden das selbe. 12-Faktor zeigt dies einfach in mehreren kleinen Kapiteln, anstelle von fünf grossen Kapiteln. 
+Was aber im IDEAL fehlt oder weniger genau beschrieben ist, sind folgende Kapitel aus der 12-Faktor Methode:
+\begin{itemize}
+\item	Codebase
+\item	Build, release, run
+\item	Port Binding
+\item	Disposability
+\item	Dev/prod partity
+\item	Logs
+\item	Admin processes
+\end{itemize}
+\section{Welche der beiden Methoden scheint einfacher?}
+Die 12-Faktor Methode scheint mir einfacher zu sein. Diese ist viel genauer beschrieben und man weiss bei jedem Punkt genau, was man anpassen muss.
 
 
 
