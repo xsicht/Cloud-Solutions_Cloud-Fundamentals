@@ -192,6 +192,24 @@ Die Preispolitik ist bei der Swisscom Application Cloud viel einfacher als bei A
 Bei Swisscom kostet eine solche Konfiguration CHF 33.00.- monatlich. Bei AWS EC2 USD 11.44. Selbst wenn man die Währungsvorteile vom amerikanischen Dollar aussen vor lässt, ist Amazon doch sehr deutlich günstiger. Der Vergleich ist aber sehr gewagt, da bei Swisscom nicht ersichtlich ist, welche Computing Leistung man erhält. Bei AWS EC2 erhält man für diesen Preis eine sehr schwache CPU Leistung.
 
 \chapter{Preisvergleich Hosting vs IaaS vs PaaS}
+Bei der Preiskalkulation kamen wir auf folgendes Ergebnis:
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.65]{images/kostenvergleich.png}  
+\end{figure}
+\section{Welche Variante ist die kostengünstigste?}
+Bei unserer Kalkulation ist die Variante von Amazon die günstigste Variante. Diese ist mit 6010 Euro für zwei Jahre knapp günstiger als die Swisscom Variante. Mit eigenen Servern ist man deutlich über diesem Preis.
+\section{Auf welche Schwierigkeiten stosst man beim Vergleichen?}
+Es ist schwierig die Angebote miteinander zu vergleichen, da nicht jeder Anbieter das gleiche Berechnen. Bei der Swisscom musste das Datenvolumen zum Beispiel nicht bezahlt werden. Oder VMware berechnet den Speicher eher teuer. So kann man den Verglu nehmen.
+Es ist auch sehr schwer abzuschätzen, was für eine Leistung man bekommt. Meistens stehen nur die CPU Kerne und nichts genaueres. So ist es schwer die Leistung zu vergleichen.
+\section{Wie schätzen Sie die Preise für Cloud Computing insgesamt ein?}
+Die Preise sind sehr günstig. Man zahlt nur genau das was man benötigt. Dies ist bei eigenen Servern nicht so, da in diesem Fall die Server ja nicht die gesamte Zeit so ausgelastet sind, damit es sich lohnt. Ein eigener Server wird ab ca. 80\% lohnenswert.eich nicht zu gena
+\section{Sollte man den Cloud-Anbieter nach gebotener Funktionalität und Preis auswählen?}
+%TODO
+\section{Cloud-Provider oder klassisches Hosting?}
+Bei einer solch kleinen Applikation muss man klar zum Cloudanbieter greifen. Mit einer eigenen Umgebung zahlt man um ein vielfaches mehr. In unserem Fall zahlt man 4x mehr für das klassische Hosting. 
+
+
 \chapter{Twelve-Factor Apps}
 Als Beispielapplikation haben wir Das Miniprojekt aus WED2 vom Jahr 2016 genommen. Dies ist eine kleine Notizenapp in Node.JS geschrieben.
 \section{Welche Anpassungen müssten Sie an Ihrer Applikation vornehmen?}
